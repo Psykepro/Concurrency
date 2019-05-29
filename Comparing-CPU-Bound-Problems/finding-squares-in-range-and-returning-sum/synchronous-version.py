@@ -1,4 +1,4 @@
-'''Average runtime 18.04 seconds on my computer'''
+'''Average runtime 18.04 seconds on my computer -> The slowest solution!'''
 
 from timeit import default_timer as timer
 

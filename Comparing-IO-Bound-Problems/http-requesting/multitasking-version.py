@@ -12,11 +12,11 @@ async def download_site(session, url):
 
 async def download_all_sites(sites):
     async with aiohttp.ClientSession() as session:
-        tasks = []
+        futures = []
         for url in sites:
             task = asyncio.ensure_future(download_site(session, url))
-            tasks.append(task)
-        await asyncio.gather(*tasks, return_exceptions=True)
+            futures.append(task)
+        await asyncio.gather(*futures, return_exceptions=True)
 
 
 if __name__ == "__main__":
